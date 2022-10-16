@@ -11,6 +11,8 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import Slide from '@mui/material/Slide';
 import { motion } from "framer-motion";
+import './upload.css'
+
 
 
 
@@ -59,7 +61,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 function Home() {
   return(
-    <div>
+    <div class="mainCountainer">
              <motion.div
       className="intro-text"
       initial={{ opacity: 0 }}
