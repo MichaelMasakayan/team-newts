@@ -1,70 +1,28 @@
+import React, { useState } from "react";
 
-import './upload.css'
-import axios from 'axios';
+const UploadAndDisplayImage = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
 
-import React,{Component} from 'react';
-
-class UploadAndDisplayImage extends Component {
-	state = {
-	selectedFile: null
-	};
-		onFileChange = event => {
-	this.setState({ selectedFile: event.target.files[0] });
-	};
-		onFileUpload = () => {
-	const formData = new FormData();
-		formData.append(
-		"myFile",
-		this.state.selectedFile,
-		this.state.selectedFile.name
-	);
-		console.log(this.state.selectedFile);
-	axios.post("api/uploadfile", formData);
-	};
-	fileData = () => {
-	if (this.state.selectedFile) {
-		return (
-		<div>
-			<h2>File Details:</h2>
-			
-<p>File Name: {this.state.selectedFile.name}</p>
-<p>File Type: {this.state.selectedFile.type}</p>
-<p>
-			Last Modified:{" "}
-			{this.state.selectedFile.lastModifiedDate.toDateString()}
-			</p>
-
-		</div>
-		);
-	} else {
-		return (
-		<div>
-			<br />
-			<h4>Choose before Pressing the Upload button</h4>
-		</div>
-		);
-	}
-	};
-	
-	render() {
-	
-	return (
-		<div class="container">
-			<h1>
-			Upload your file here
-			</h1>
-			<div>
-				<input type="file" onChange={this.onFileChange}/>
-				<button onClick={this.onFileUpload}>
-				Upload!
-				</button>
-			</div>
-		{this.fileData()}
-		</div>
-	);
-	}
-}
-
-
+  return (
+    <div>
+      <h1>Upload and Display Image usign React Hook's</h1>
+      {selectedImage && (
+        <div>
+        <img alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+        <br />
+        <button onClick={()=>setSelectedImage(null)}>Remove</button>
+        </div>
+      )}
+      <input 
+        type="file"
+        name="myImage"
+        onChange={(event) => {
+          console.log(event.target.files[0]);
+          console.log(event.target.files[0].name);
+          setSelectedImage(event.target.files[0]);
+        }}/>
+    </div>
+  );
+};
 
 export default UploadAndDisplayImage;

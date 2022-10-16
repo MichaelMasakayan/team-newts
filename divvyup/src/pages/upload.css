@@ -42,7 +42,7 @@ font-family: montserrat;
     font-size: 28px;
   }
   h1 {
-    font-size: 32px;
+    font-size: 0px;
     text-align: center;
     font-family: 'montserrat';
   }
@@ -65,21 +65,19 @@ font-family: montserrat;
 
     padding: 0.2em 0.4em;
     border-radius: 0.2em;
-
     transition: 1s;
     text-align: center;
   }
   
   .container{  
     text-align: center;  
-    padding-top: 100px;  
+    padding-top: 100px; 
+    font-size: 10; 
     }
-    
 button
 {
   padding: 0.2em 0.4em;
   border-radius: 0.2em;
-
   transition: 1s;
   text-align: center; 
 }
