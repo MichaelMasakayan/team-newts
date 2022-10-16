@@ -12,12 +12,13 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from './/assets/divvyuplogo.png';
 import { ThemeProvider , createTheme } from '@mui/material/styles';
+import "@fontsource/montserrat";
 
 
 const theme = createTheme({
   typography: {
     button: {
-      fontFamily: 'roboto',
+      fontFamily: 'montserrat',
       fontSize: 16,
       fontWeight: 300,
     },
@@ -48,9 +49,9 @@ const ResponsiveAppBar = () => {
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
-                fontFamily: 'roboto',
+                fontFamily: 'montserrat',
                 fontWeight: 300,
-                letterSpacing: '.25rem',
+                letterSpacing: '.2rem',
                 color: 'inherit',
                 textDecoration: 'none',
               }}
@@ -88,13 +89,13 @@ const ResponsiveAppBar = () => {
                 }}
               >
                 <MenuItem onClick={handleCloseNavMenu} component={Link} to='/'>
-                  <Typography textAlign="center" fontFamily="roboto" sx={{ fontWeight: 300 }}>Home</Typography>
+                  <Typography textAlign="center" fontFamily="montserrat" sx={{ fontWeight: 300 }}>Home</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu} component={Link} to='/about'>
-                  <Typography textAlign="center" fontFamily="roboto" sx={{ fontWeight: 300 }}>About</Typography>
+                  <Typography textAlign="center" fontFamily="montserrat" sx={{ fontWeight: 300 }}>About</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu} component={Link} to='/contacts'>
-                  <Typography textAlign="center" fontFamily="roboto" sx={{ fontWeight: 300 }}>Contacts</Typography>
+                  <Typography textAlign="center" fontFamily="montserrat" sx={{ fontWeight: 300 }}>Contacts</Typography>
                 </MenuItem>
               </Menu>
             </Box>
@@ -108,7 +109,7 @@ const ResponsiveAppBar = () => {
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
-                fontFamily: 'roboto',
+                fontFamily: 'montserrat',
                 fontWeight: 300,
                 letterSpacing: '.25rem',
                 color: 'inherit',
