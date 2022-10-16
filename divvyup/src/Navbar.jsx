@@ -91,11 +91,11 @@ const ResponsiveAppBar = () => {
                 <MenuItem onClick={handleCloseNavMenu} component={Link} to='/'>
                   <Typography textAlign="center" fontFamily="montserrat" sx={{ fontWeight: 300 }}>Home</Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu} component={Link} to='/about'>
-                  <Typography textAlign="center" fontFamily="montserrat" sx={{ fontWeight: 300 }}>About</Typography>
+                <MenuItem onClick={handleCloseNavMenu} component={Link} to='/about-us'>
+                  <Typography textAlign="center" fontFamily="montserrat" sx={{ fontWeight: 300 }}>About Us</Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu} component={Link} to='/contacts'>
-                  <Typography textAlign="center" fontFamily="montserrat" sx={{ fontWeight: 300 }}>Contacts</Typography>
+                <MenuItem onClick={handleCloseNavMenu} component={Link} to='/sample'>
+                  <Typography textAlign="center" fontFamily="montserrat" sx={{ fontWeight: 300 }}>Sample</Typography>
                 </MenuItem>
               </Menu>
             </Box>
@@ -123,10 +123,10 @@ const ResponsiveAppBar = () => {
                  <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
               </Button>
               <Button color="inherit">
-                <Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>About</Link>
+                <Link to="/about-us" style={{ textDecoration: 'none', color: 'white' }}>About Us</Link>
               </Button>
               <Button color="inherit">
-                <Link to="/contacts" style={{ textDecoration: 'none', color: 'white' }}>Contacts</Link>
+                <Link to="/sample" style={{ textDecoration: 'none', color: 'white' }}>Sample</Link>
               </Button>
             </Box>
           </Toolbar>
