@@ -1,12 +1,13 @@
 import React from 'react';
+import DataTable from "./component/DataTable";
 
-function Contact() {
+function SampleCode() {
 
     return (
         <div>
-            Contact pageeeeee
-      </div>
+            <DataTable/> 
+        </div>
     );
 }
 
-export default Contact;
+export default SampleCode;
