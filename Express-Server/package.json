@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@veryfi/veryfi-sdk": "^1.2.2",
+    "cors": "^2.8.5"
+  }
+}
