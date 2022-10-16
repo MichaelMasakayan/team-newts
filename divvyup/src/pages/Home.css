@@ -42,11 +42,17 @@
   }
   .container {
     display: grid;
-    padding: 5rem;
+    padding: 0.2rem;
     text-align: center; 
-    font-family: 'montserrat'
-
+    font-family: 'montserrat';
+    font-size: 3rem;
   }
   body {
     background-color: #c7ced6;
+  }
+  p{
+    text-size: 1rem;
+    text-align: center; 
+    font-family: 'montserrat';
+
   }
