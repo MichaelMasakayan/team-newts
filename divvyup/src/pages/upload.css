@@ -1,0 +1,85 @@
+font-family: montserrat;
+.app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 8px;
+    font-size: 32px;
+  }
+  
+  th {
+    background-color: rgb(117, 201, 250);
+  }
+  
+  td {
+    background-color: rgb(205, 235, 253);
+  }
+  
+  form {
+    display: flex;
+    gap: 5px;
+  }
+  
+  form td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  
+  form * {
+    font-size: 28px;
+  }
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    font-family: 'montserrat';
+  }
+  h2 {
+    font-size: 32px;
+    text-align: center;
+    font-family: 'montserrat';
+  }
+  h3 {
+    font-size: 32px;
+    text-align: center;
+    font-family: 'montserrat';
+  }
+  p {
+    font-size: 16px;
+    text-align: center;
+    font-family: 'montserrat';
+  }
+  input[type="file"]::file-selector-button {
+
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+
+    transition: 1s;
+    text-align: center;
+  }
+  
+  .container{  
+    text-align: center;  
+    padding-top: 100px;  
+    }
+    
+button
+{
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+
+  transition: 1s;
+  text-align: center; 
+}

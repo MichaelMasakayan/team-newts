@@ -1,58 +1,70 @@
-import React from "react";
-import ImageUploading from "react-images-uploading";
 
-function Upload() {
-  const [images, setImages] = React.useState([]);
-  const maxNumber = 69;
-  const onChange = (imageList, addUpdateIndex) => {
-    // data for submit
-    console.log(imageList, addUpdateIndex);
-    setImages(imageList);
-  };
+import './upload.css'
+import axios from 'axios';
 
-  return (
-    <div>
-      <ImageUploading
-        multiple
-        value={images}
-        onChange={onChange}
-        maxNumber={maxNumber}
-        dataURLKey="data_url"
-        acceptType={["png"]}
-      >
-        {({
-          imageList,
-          onImageUpload,
-          onImageRemoveAll,
-          onImageUpdate,
-          onImageRemove,
-          isDragging,
-          dragProps
-        }) => (
-          // write your building UI
-          <div className="upload__image-wrapper">
-            <button
-              style={isDragging ? { color: "red" } : null}
-              onClick={onImageUpload}
-              {...dragProps}
-            >
-              Click or Drop here
-            </button>
-            <button onClick={onImageRemoveAll}>Remove all images</button>
-            {imageList.map((image, index) => (
-              <div key={index} className="image-item">
-                <img src={image.data_url} alt="" width="100" />
-                <div className="image-item__btn-wrapper">
-                  <button onClick={() => onImageUpdate(index)}>Update</button>
-                  <button onClick={() => onImageRemove(index)}>Remove</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </ImageUploading>
-    </div>
-  );
+import React,{Component} from 'react';
+
+class UploadAndDisplayImage extends Component {
+	state = {
+	selectedFile: null
+	};
+		onFileChange = event => {
+	this.setState({ selectedFile: event.target.files[0] });
+	};
+		onFileUpload = () => {
+	const formData = new FormData();
+		formData.append(
+		"myFile",
+		this.state.selectedFile,
+		this.state.selectedFile.name
+	);
+		console.log(this.state.selectedFile);
+	axios.post("api/uploadfile", formData);
+	};
+	fileData = () => {
+	if (this.state.selectedFile) {
+		return (
+		<div>
+			<h2>File Details:</h2>
+			
+<p>File Name: {this.state.selectedFile.name}</p>
+<p>File Type: {this.state.selectedFile.type}</p>
+<p>
+			Last Modified:{" "}
+			{this.state.selectedFile.lastModifiedDate.toDateString()}
+			</p>
+
+		</div>
+		);
+	} else {
+		return (
+		<div>
+			<br />
+			<h4>Choose before Pressing the Upload button</h4>
+		</div>
+		);
+	}
+	};
+	
+	render() {
+	
+	return (
+		<div class="container">
+			<h1>
+			Upload your file here
+			</h1>
+			<div>
+				<input type="file" onChange={this.onFileChange}/>
+				<button onClick={this.onFileUpload}>
+				Upload!
+				</button>
+			</div>
+		{this.fileData()}
+		</div>
+	);
+	}
 }
 
-export default Upload;
+
+
+export default UploadAndDisplayImage;
