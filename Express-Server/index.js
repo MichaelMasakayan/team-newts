@@ -1,6 +1,6 @@
 const express = require( 'express' )
 const app     = express()
-const port    = process.env.PORT || 3000
+const port    = process.env.PORT || 3001
 
 const Client = require('@veryfi/veryfi-sdk');
 const client_id = 'vrfuA9F2MsPoz2OvR4arAdcVJDDWrTHzC7L0F9R';
