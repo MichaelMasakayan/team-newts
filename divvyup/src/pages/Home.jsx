@@ -13,46 +13,9 @@ import Slide from '@mui/material/Slide';
 import { motion } from "framer-motion";
 import MyImage from './iphone.png';
 import './upload.css'
+//import IPhone from './iphone.png';
 
 
-
-
-// const icon = (
-//   <Paper sx={{ m: 1 }} elevation={4}>
-//     <Box component="svg" sx={{ width: 100, height: 100 }}>
-//       <Box
-//         component="polygon"
-//         sx={{
-//           fill: (theme) => theme.palette.common.white,
-//           stroke: (theme) => theme.palette.divider,
-//           strokeWidth: 1,
-//         }}
-//         points="0,100 50,00, 100,100"
-//       />
-//     </Box>
-//   </Paper>
-// );
-
-// function SimpleGrow() {
-//   const [checked, setChecked] = React.useState(false);
-
-//   const handleChange = () => {
-//     setChecked((prev) => !prev);
-//   };
-
-//   return (
-//     <Box sx={{ height: 180 }}>
-//       <FormControlLabel
-//         control={<Switch checked={checked} onChange={handleChange} />}
-//         label="Show"
-//       />
-//       <Box sx={{ display: 'flex' }}>
-//         <Grow in={checked}>{icon}</Grow>
-//         {/* Conditionally applies the timeout prop to change the entry speed. */}
-//       </Box>
-//     </Box>
-//   );
-// }
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -60,36 +23,19 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
+
 function Home() {
   return(
-    <div class="mainCountainer">
-             <motion.div
-      className="intro-text"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 2.2 }}
-    >
-         <h1 class="container"> Splitting the Bill, Made Easy</h1>
-      <div class="upload">
-      <img   class="upload" src={MyImage} alt="upload "/>
-      </div>
-   
-      <p >Going out to eat with friends is always a great time, but having to figure out at the end who will pay and how much each person owes for what always kills the mood. We wanted to figure out a way to make this process easier, so we came up with the idea of DivvyUp.</p>
-    </motion.div> 
-
-
-      <Container maxWidth='xl'>
+    <div class="mainContainer">
+      <Container maxWidth='xl' height='75%'>
         <Box sx={{ flexGrow: 1, }}>
           <Grid container spacing={2}>
-            <Grid item xs={8}>
-            {/* <Slide direction="up" in timout mountOnEnter unmountOnExit>
-            <h1> Splitting the Bill, Made Easy</h1>
-  </Slide> */}
-      
-              {/* <Typography
+            <Grid item md={7} xs={12}>
+              <Typography
                 variant="h2"
                 sx={{
                   mr: 2,
+                  mt: 10,
                   fontFamily: 'montserrat',
                   fontWeight: 300,
                   letterSpacing: '.2rem',
@@ -97,48 +43,40 @@ function Home() {
                 }}
               >
                 Splitting the Bill, Made Easy
-              </Typography> */}
+              </Typography>
+              <Box>
+                <Typography
+                  variant="p"
+                  sx={{
+                    mr: 2,
+                    fontFamily: 'montserrat',
+                    fontWeight: 300,
+                    letterSpacing: '.2rem',
+                    color: 'inherit',
+                  }}
+                >
+                  Going out to eat with friends is always a great time, but having to figure out at the end who will pay and how much each person owes for what always kills the mood. We wanted to figure out a way to make this process easier, so we came up with the idea of DivvyUp.
+                </Typography>
+              </Box>
             </Grid>
-            <Grid item xs={4}>
-              {/* PUT IMAGE HERE <Box component={img}></Box>*/}
-            </Grid>
-          </Grid>
-        </Box>
-        {/*<Box sx={{ display: 'flex', }} flex-wrap='wrap'>
-          <Box maxWidth='60%' sx={{ display: 'flex', }} flex-wrap='wrap'>
-            <Typography
-              variant="h2"
-              sx={{
-                mr: 2,
-                fontFamily: 'montserrat',
-                fontWeight: 300,
-                letterSpacing: '.2rem',
-                color: 'inherit',
-              }}
-            >
-              Splitting the Bill, Made Easy
-            </Typography>
-          </Box>
-          <Box maxWidth='40%' sx={{ display: 'flex', }} flex-wrap='wrap'>
-            <Typography
-              variant="h2"
-              sx={{
-                mr: 2,
-                fontFamily: 'montserrat',
-                fontWeight: 300,
-                letterSpacing: '.2rem',
-                color: 'inherit',
-              }}
-            >
-              Splitting the Bill, Made Easy
-            </Typography>
-          </Box>
-        </Box>*/}
+             <Grid item md={5} xs={12}>
+               <motion.div
+                  className="intro-text"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 2.2 }}
+                  height="100%"
+               >
+                 <Box>
+                   <img class="upload" src={MyImage} alt="upload"/>
+                 </Box>
+                </motion.div>
+             </Grid>
+           </Grid>
+         </Box>
       </Container>
-      {/* <SimpleGrow/> */}
     </div>
   );
 }
-
 
 export default Home;
