@@ -41,7 +41,7 @@ const ResponsiveAppBar = () => {
           <Toolbar disableGutters>
             <Box component="img" sx={{ height:48, mr:1, display:{xs: 'none', md: 'flex'} }} alt="logo" src={Logo} />
             <Typography
-              variant="h6"
+              variant="h5"
               noWrap
               component="a"
               href="/"
@@ -117,7 +117,7 @@ const ResponsiveAppBar = () => {
             >
               DivvyUp
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box justifyContent="flex-end" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               <Button color="inherit">
                  <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
               </Button>
