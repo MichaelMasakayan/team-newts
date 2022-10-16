@@ -17,9 +17,9 @@ import { ThemeProvider , createTheme } from '@mui/material/styles';
 const theme = createTheme({
   typography: {
     button: {
-      fontFamily: 'avenir next',
-      fontSize: 15,
-      fontWeight: 400,
+      fontFamily: 'roboto',
+      fontSize: 16,
+      fontWeight: 300,
     },
   }
 });
@@ -48,9 +48,9 @@ const ResponsiveAppBar = () => {
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
-                fontFamily: 'avenir',
-                fontWeight: 700,
-                letterSpacing: '.2rem',
+                fontFamily: 'roboto',
+                fontWeight: 300,
+                letterSpacing: '.25rem',
                 color: 'inherit',
                 textDecoration: 'none',
               }}
@@ -88,13 +88,13 @@ const ResponsiveAppBar = () => {
                 }}
               >
                 <MenuItem onClick={handleCloseNavMenu} component={Link} to='/'>
-                  <Typography textAlign="center" fontFamily="avenir next">Home</Typography>
+                  <Typography textAlign="center" fontFamily="roboto" sx={{ fontWeight: 300 }}>Home</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu} component={Link} to='/about'>
-                  <Typography textAlign="center" fontFamily="avenir next">About</Typography>
+                  <Typography textAlign="center" fontFamily="roboto" sx={{ fontWeight: 300 }}>About</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu} component={Link} to='/contacts'>
-                  <Typography textAlign="center" fontFamily="avenir next">Contacts</Typography>
+                  <Typography textAlign="center" fontFamily="roboto" sx={{ fontWeight: 300 }}>Contacts</Typography>
                 </MenuItem>
               </Menu>
             </Box>
@@ -108,9 +108,9 @@ const ResponsiveAppBar = () => {
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
-                fontFamily: 'avenir',
-                fontWeight: 700,
-                letterSpacing: '.2rem',
+                fontFamily: 'roboto',
+                fontWeight: 300,
+                letterSpacing: '.25rem',
                 color: 'inherit',
                 textDecoration: 'none',
               }}
