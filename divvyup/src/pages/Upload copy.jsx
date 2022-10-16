@@ -15,6 +15,8 @@ const UploadAndDisplayImage = () => {
 fileChangedHandler = event => {
   this.setState({ selectedFile: event.target.files[0] })
 }
+
+
 uploadHandler = () => {
   const formData = new FormData()
   formData.append(
@@ -22,19 +24,12 @@ uploadHandler = () => {
     this.state.selectedFile,
     this.state.selectedFile.name
   )
-  axios.post('my-domain.com/file-upload', formData){
+  axios.post('my-domain.com/file-upload', formData, {
     onUploadProgress: progressEvent => {
       console.log(progressEvent.loaded / progressEvent.total)
     }
   })
-
 }
-
-uploadHandler = () => {
-  console.log(this.state.selectedFile)
-}
-    </div>
-  );
-};
+</div>
 
 export default UploadAndDisplayImage;

@@ -11,6 +11,7 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import Slide from '@mui/material/Slide';
 import { motion } from "framer-motion";
+import MyImage from './iphone.png';
 import './upload.css'
 
 
@@ -68,7 +69,11 @@ function Home() {
       animate={{ opacity: 1 }}
       transition={{ duration: 2.2 }}
     >
-      <h1 class="container"> Splitting the Bill, Made Easy</h1>
+         <h1 class="container"> Splitting the Bill, Made Easy</h1>
+      <div class="upload">
+      <img   class="upload" src={MyImage} alt="upload "/>
+      </div>
+   
       <p >Going out to eat with friends is always a great time, but having to figure out at the end who will pay and how much each person owes for what always kills the mood. We wanted to figure out a way to make this process easier, so we came up with the idea of DivvyUp.</p>
     </motion.div> 
 
