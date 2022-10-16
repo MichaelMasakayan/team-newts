@@ -40,3 +40,13 @@
   form * {
     font-size: 28px;
   }
+  .container {
+    display: grid;
+    padding: 5rem;
+    text-align: center; 
+    font-family: 'montserrat'
+
+  }
+  body {
+    background-color: #c7ced6;
+  }
