@@ -17,9 +17,9 @@ import { ThemeProvider , createTheme } from '@mui/material/styles';
 const theme = createTheme({
   typography: {
     button: {
-      fontFamily: 'avenir next',
-      fontSize: 15,
-      fontWeight: 400,
+      fontFamily: 'roboto',
+      fontSize: 16,
+      fontWeight: 300,
     },
   }
 });
@@ -41,16 +41,16 @@ const ResponsiveAppBar = () => {
           <Toolbar disableGutters>
             <Box component="img" sx={{ height:48, mr:1, display:{xs: 'none', md: 'flex'} }} alt="logo" src={Logo} />
             <Typography
-              variant="h6"
+              variant="h5"
               noWrap
               component="a"
               href="/"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
-                fontFamily: 'avenir',
-                fontWeight: 700,
-                letterSpacing: '.2rem',
+                fontFamily: 'roboto',
+                fontWeight: 300,
+                letterSpacing: '.25rem',
                 color: 'inherit',
                 textDecoration: 'none',
               }}
@@ -88,13 +88,13 @@ const ResponsiveAppBar = () => {
                 }}
               >
                 <MenuItem onClick={handleCloseNavMenu} component={Link} to='/'>
-                  <Typography textAlign="center" fontFamily="avenir next">Home</Typography>
+                  <Typography textAlign="center" fontFamily="roboto" sx={{ fontWeight: 300 }}>Home</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu} component={Link} to='/about'>
-                  <Typography textAlign="center" fontFamily="avenir next">About</Typography>
+                  <Typography textAlign="center" fontFamily="roboto" sx={{ fontWeight: 300 }}>About</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu} component={Link} to='/contacts'>
-                  <Typography textAlign="center" fontFamily="avenir next">Contacts</Typography>
+                  <Typography textAlign="center" fontFamily="roboto" sx={{ fontWeight: 300 }}>Contacts</Typography>
                 </MenuItem>
               </Menu>
             </Box>
@@ -108,16 +108,16 @@ const ResponsiveAppBar = () => {
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
-                fontFamily: 'avenir',
-                fontWeight: 700,
-                letterSpacing: '.2rem',
+                fontFamily: 'roboto',
+                fontWeight: 300,
+                letterSpacing: '.25rem',
                 color: 'inherit',
                 textDecoration: 'none',
               }}
             >
               DivvyUp
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box justifyContent="flex-end" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               <Button color="inherit">
                  <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
               </Button>
