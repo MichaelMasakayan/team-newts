@@ -37,7 +37,7 @@ const ResponsiveAppBar = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ bgcolor:'#4c477f' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box component="img" sx={{ height:48, mr:1, display:{xs: 'none', md: 'flex'} }} alt="logo" src={Logo} />
