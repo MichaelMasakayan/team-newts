@@ -15,7 +15,7 @@ const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 function Home() {
   return(
   <div className="App">
-    <DataTable/>
+    <DataTable/> 
   </div>
   // );
     // const [checked, setChecked] = React.useState([0]);
